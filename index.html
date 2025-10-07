@@ -1,35 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./css/styles.css" />
+
   <title>Frontend Mentor | News homepage</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
+<body>
+  <header class="navbar">
+    <img src="./assets/images/logo.svg" alt="Web 3.0 Logo, an uppercase W with a fullstop." class="navbar__logo" />
+    <nav>
+      <span id="nav-label" hidden>Navigation</span>
+      <button id="btnOpen" class="navbar__open" aria-expanded="false" aria-labelledby="nav-label">
+        <img src="./assets/images/icon-menu.svg" alt="" />
+      </button>
+      <div class="navbar__menu" role="dialog" aria-labelledby="nav-label">
+        <button id="btnClose" class="navbar__close" aria-label="Close">
+          <img src="./assets/images/icon-menu-close.svg" alt="" />
+        </button>
+        <ul class="navbar__links">
+          <li class="navbar__item"><a href="" class="navbar__link">Home</a></li>
+          <li class="navbar__item"><a href="" class="navbar__link">New</a></li>
+          <li class="navbar__item"><a href="" class="navbar__link">Popular</a></li>
+          <li class="navbar__item"><a href="" class="navbar__link">Trending</a></li>
+          <li class="navbar__item"><a href="" class="navbar__link">Categories</a></li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+
+  </main>
 
   The Bright Future of Web 3.0?
 
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the
+  people.
   But is it really fulfilling its promise?
 
   Read more
 
-  New 
+  New
 
   Hydrogen VS Electric Cars
   Will hydrogen-fueled cars ever catch up to EVs?
@@ -51,10 +70,12 @@
   03
   The Growth of Gaming
   How the pandemic has sparked fresh opportunities.
-  
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="./script.js"></script>
 </body>
+
 </html>
