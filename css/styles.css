@@ -29,6 +29,8 @@ body {
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
+  padding: 2rem 0 0;
+  color: var(--very-dark-blue);
 }
 .attribution a {
   color: var(--attribution);
@@ -181,4 +183,34 @@ main {
   color: var(--grayish-blue-2);
   font-size: 0.9375rem;
   line-height: 1.4rem;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.articles__container {
+  display: grid;
+  grid-template-columns: 5fr 11fr;
+  gap: 1.4375rem;
+}
+.articles__image {
+  width: 100%;
+}
+.articles__number {
+  display: block;
+  color: var(--soft-red);
+  font-size: 1.9rem;
+  margin-block-end: 0.7rem;
+}
+.articles__title {
+  margin-block-end: 0.7rem;
+  color: var(--very-dark-blue);
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+.articles__text {
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
 }/*# sourceMappingURL=styles.css.map */
