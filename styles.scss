@@ -189,9 +189,21 @@ main {
     grid-template-rows: repeat(3, auto);
     gap: 0.8rem;
 
+    @media only screen and (min-width: $width-upper) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 0;
+        row-gap: 1.9375rem;
+    }
+
     &__img {
         width: 100%;
         margin-bottom: 0.45rem;
+
+        @media only screen and (min-width: $width-upper) {
+            grid-area: 1 / 1 / 2 / 3;
+            margin-bottom: 0;
+        }
     }
 
     &__title {
@@ -199,11 +211,20 @@ main {
         font-weight: 800;
         width: 80%;
         color: var(--very-dark-blue);
+
+        @media only screen and (min-width: $width-upper) {
+            font-size: 3.3rem;
+            line-height: 3.6rem;
+        }
     }
 
     &__text {
         font-size: 0.9375rem;
         line-height: 1.45;
+
+        @media only screen and (min-width: $width-upper) {
+            font-size: 1rem;
+        }
     }
 
     &__button {
@@ -218,6 +239,19 @@ main {
         text-transform: uppercase;
         font-weight: 800;
         letter-spacing: 0.25rem;
+
+        @media only screen and (min-width: $width-upper) {
+            margin-block-start: 0;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        @media only screen and (min-width: $width-upper) {
+            justify-content: space-between;
+        }
     }
 }
 
@@ -231,6 +265,10 @@ main {
         font-size: 1.8rem;
         letter-spacing: 0.1rem;
         margin-block-end: 1.75rem;
+
+        @media only screen and (min-width: $width-upper) {
+            font-size: 2.3rem;
+        }
     }
 
     &__divider {
