@@ -21,11 +21,8 @@ body {
   font-size: 100%;
   font-family: "Inter", sans-serif;
   background-color: var(--off-white);
+  color: var(--dark-grayish-blue);
   padding: 0.9375rem;
-}
-
-img {
-  max-width: 100%;
 }
 
 .attribution {
@@ -38,6 +35,10 @@ img {
 
 main {
   padding-block: 1.25rem;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  gap: 3.9375rem;
 }
 
 .navbar {
@@ -119,4 +120,36 @@ main {
 }
 .navbar__logo {
   width: 2.8125rem;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  gap: 0.8rem;
+}
+.header__img {
+  width: 100%;
+  margin-bottom: 0.45rem;
+}
+.header__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  width: 80%;
+  color: var(--very-dark-blue);
+}
+.header__text {
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+.header__button {
+  border: none;
+  width: 11.5625rem;
+  height: 3rem;
+  background-color: var(--soft-red);
+  margin-block-start: 1.5625rem;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.25rem;
 }/*# sourceMappingURL=styles.css.map */
