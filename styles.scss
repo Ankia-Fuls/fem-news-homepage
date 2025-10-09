@@ -9,7 +9,12 @@
     --dark-grayish-blue: hsl(236, 13%, 42%);
     --very-dark-blue: hsl(240, 100%, 5%);
     --attribution: hsl(228, 45%, 44%);
+
+
 }
+
+$width-lower: 500px;
+$width-upper: 501px;
 
 *,
 html,
@@ -25,6 +30,13 @@ body {
     background-color: var(--off-white);
     color: var(--dark-grayish-blue);
     padding: 0.9375rem;
+    max-width: 69.375rem;
+    margin: auto;
+
+    @media only screen and (min-width: $width-upper) {
+        padding-top: 6%;
+    }
+
 }
 
 .attribution {
@@ -54,12 +66,17 @@ main {
     align-items: center;
     padding-block: 0.625rem;
 
+    @media only screen and (min-width: $width-upper) {
+        padding-block: 0;
+        padding-block-end: 2.1rem;
+    }
+
     button {
         background: none;
         border: none;
         padding: 0;
 
-        @media only screen and (min-width:501px) {
+        @media only screen and (min-width: $width-upper) {
             //desktop
             display: none;
         }
@@ -94,7 +111,7 @@ main {
     }
 
     &__menu {
-        @media only screen and (max-width:500px) {
+        @media only screen and (max-width: $width-lower) {
             //mobile
             position: fixed; //fixes position, removes from flow, parent element effectively entire page
             // inset: 0; //take up entire page, no inset
@@ -111,7 +128,7 @@ main {
 
         }
 
-        @media only screen and (max-width:500px) and (prefers-reduced-motion) {
+        @media only screen and (max-width: $width-lower) and (prefers-reduced-motion) {
             translate: 0;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
@@ -124,11 +141,13 @@ main {
         padding: 0;
 
         display: flex;
+        flex-direction: column;
         align-items: left;
-        gap: 1.7rem;
+        gap: 2rem;
 
-        @media only screen and (max-width:500px) {
-            flex-direction: column;
+        @media only screen and (min-width: $width-upper) {
+            flex-direction: row;
+            gap: 1.7rem;
         }
     }
 
@@ -140,10 +159,18 @@ main {
         text-decoration: none;
         color: inherit;
         font-size: 1.15rem;
+
+        @media only screen and (min-width: $width-upper) {
+            font-size: 0.9375rem;
+        }
     }
 
     &__logo {
         width: 2.8125rem;
+
+        @media only screen and (min-width: $width-upper) {
+            width: 4.125rem;
+        }
     }
 }
 
