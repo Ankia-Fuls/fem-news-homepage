@@ -13,9 +13,10 @@
 
 }
 
-$width-lower: 849px;
-$width-upper: 850px;
-$width-medium: 950px;
+$width-lower: 53.0625rem;
+$width-upper: 53.125rem;
+$width-medium: 59.375rem;
+$width-extra: 37.5rem;
 
 *,
 html,
@@ -33,15 +34,18 @@ body {
     padding: 0.9375rem;
     margin: auto;
 
-
-    @media only screen and (min-width: $width-upper) {
+    @media only screen and (min-width: $width-extra) {
         padding: 0;
-        padding-top: 6%;
+        padding-top: clamp(1rem, 6%, 3.125rem);
         width: 90%;
         max-width: 69.375rem;
 
     }
 
+    @media only screen and (min-width: $width-medium) {
+        padding: 0;
+        padding-top: 6%;
+    }
 }
 
 .attribution {
@@ -50,6 +54,10 @@ body {
     padding: 2rem 0 0;
 
     color: var(--very-dark-blue);
+
+    @media only screen and (min-width: $width-upper) {
+        padding: 2rem 0;
+    }
 
     a {
         color: var(--attribution);
@@ -175,6 +183,11 @@ main {
         @media only screen and (min-width: $width-upper) {
             font-size: 0.9375rem;
         }
+
+        &:hover {
+            cursor: pointer;
+            color: var(--soft-red)
+        }
     }
 
     &__logo {
@@ -253,16 +266,13 @@ main {
         @media only screen and (min-width: $width-upper) {
             margin-block-start: 1.9375rem;
         }
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--very-dark-blue);
+            color: var(--off-white);
+        }
     }
-
-    // &__container {
-    //     display: flex;
-    //     flex-direction: column;
-
-    //     @media only screen and (min-width: $width-upper) {
-    //         justify-content: space-between;
-    //     }
-    // }
 }
 
 .new {
@@ -295,6 +305,14 @@ main {
 
     &__subheading {
         font-size: 1.3rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            cursor: pointer;
+            color: var(--soft-orange);
+        }
     }
 
     &__text {
@@ -333,14 +351,19 @@ main {
     }
 
     &__title {
-        margin-block-end: 0.7rem;
         color: var(--very-dark-blue);
         font-size: 1.125rem;
         font-weight: 800;
+
+        &:hover {
+            cursor: pointer;
+            color: var(--soft-red);
+        }
     }
 
     &__text {
         font-size: 0.9375rem;
         line-height: 1.5rem;
+        margin-block-start: 0.7rem;
     }
 }

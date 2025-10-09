@@ -20,7 +20,7 @@ function setupTopNav(e) {
     else {
         //desktop
         navbarMenu.removeAttribute("inert");
-        closeMobileMenu();                          //makes sure that if the screen changes to desktop while the navbar menu is open, it closes
+        // closeMobileMenu();                          //makes sure that if the screen changes to desktop while the navbar menu is open, it closes
     }
 }
 
