@@ -3,6 +3,8 @@ const btnClose = document.getElementById("btnClose");
 const navbarMenu = document.querySelector(".navbar__menu");
 const main = document.querySelector("main");
 
+const screenImg = document.querySelector(".header__img");
+
 //screen width
 const media = window.matchMedia("(width<500px)");
 
@@ -12,11 +14,15 @@ function setupTopNav(e) {
         //is mobile
         navbarMenu.setAttribute("inert", "");
         navbarMenu.style.transition = "none";       //adds a style attribute in the tag with transition none to overwrite the transistion in the styles, removing the transition
+
+        screenImg.src = "./assets/images/image-web-3-mobile.jpg";
     }
     else {
         //desktop
         navbarMenu.removeAttribute("inert");
         closeMobileMenu();                          //makes sure that if the screen changes to desktop while the navbar menu is open, it closes
+
+        screenImg.src = "./assets/images/image-web-3-desktop.jpg";
     }
 }
 
