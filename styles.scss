@@ -8,6 +8,7 @@
     --grayish-blue-2: hsla(233, 8%, 79%, 0.8);
     --dark-grayish-blue: hsl(236, 13%, 42%);
     --very-dark-blue: hsl(240, 100%, 5%);
+    --very-dark-blue-2: hsla(240, 100%, 5%, 0.6);
     --attribution: hsl(228, 45%, 44%);
 
 
@@ -80,6 +81,18 @@ main {
     }
 }
 
+.grey-out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--very-dark-blue-2);
+
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -107,6 +120,10 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__open[aria-expanded="true"] {
@@ -125,12 +142,18 @@ main {
         margin-inline-start: auto; //aligns the X to the right
         margin-block-end: 5rem; //moves links down a bit
 
+        &:hover {
+            cursor: pointer;
+        }
+
         img {
             width: 2rem;
         }
     }
 
     &__menu {
+        z-index: 1;
+
         @media only screen and (max-width: $width-lower) {
             //mobile
             position: fixed; //fixes position, removes from flow, parent element effectively entire page
@@ -146,6 +169,7 @@ main {
             translate: 100vw 0; //slide the menu in from off screen
             transition: translate 0.5s ease-in-out;
 
+            color: var(--very-dark-blue)
         }
 
         @media only screen and (max-width: $width-lower) and (prefers-reduced-motion) {

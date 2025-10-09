@@ -4,6 +4,7 @@ const navbarMenu = document.querySelector(".navbar__menu");
 const main = document.querySelector("main");
 
 const screenImg = document.querySelector(".header__img");
+const grey = document.querySelector(".grey-out");
 
 //screen width
 const media = window.matchMedia("(width<850px)");
@@ -41,12 +42,14 @@ function openMobileMenu() {
     navbarMenu.removeAttribute("style");            //removes the transition style attribute, making the original transition take place again
     main.setAttribute("inert", "");                 //cant focus or access the page below the menu
     btnClose.focus();                               //auto focus on the close button for easier navigation
+    grey.removeAttribute("hidden");
 }
 
 function closeMobileMenu() {
     btnOpen.setAttribute("aria-expanded", "false");
     navbarMenu.setAttribute("inert", "");
     main.removeAttribute("inert");
+    grey.setAttribute("hidden", "");
 
     setTimeout(() => {
         navbarMenu.style.transition = "none";       //remove the transition again after a delay to make sure the transition has completed
