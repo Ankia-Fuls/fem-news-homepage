@@ -6,7 +6,9 @@ const main = document.querySelector("main");
 const screenImg = document.querySelector(".header__img");
 
 //screen width
-const media = window.matchMedia("(width<500px)");
+const media = window.matchMedia("(width<850px)");
+
+const media_img = window.matchMedia("(width<600px)");
 
 //inert sets the component inaccessibile to screen readers and tabbing
 function setupTopNav(e) {
@@ -14,14 +16,21 @@ function setupTopNav(e) {
         //is mobile
         navbarMenu.setAttribute("inert", "");
         navbarMenu.style.transition = "none";       //adds a style attribute in the tag with transition none to overwrite the transistion in the styles, removing the transition
-
-        screenImg.src = "./assets/images/image-web-3-mobile.jpg";
     }
     else {
         //desktop
         navbarMenu.removeAttribute("inert");
         closeMobileMenu();                          //makes sure that if the screen changes to desktop while the navbar menu is open, it closes
+    }
+}
 
+function setImg(e) {
+    if (e.matches) {
+        //is mobile
+        screenImg.src = "./assets/images/image-web-3-mobile.jpg";
+    }
+    else {
+        //desktop
         screenImg.src = "./assets/images/image-web-3-desktop.jpg";
     }
 }
@@ -47,8 +56,14 @@ function closeMobileMenu() {
 }
 
 setupTopNav(media);                 //run once on page load and then when changes between screens
+setImg(media_img);
+
 media.addEventListener("change", (e) => {
     setupTopNav(e);
+})
+
+media_img.addEventListener("change", (e) => {
+    setImg(e);
 })
 
 btnOpen.addEventListener("click", openMobileMenu);

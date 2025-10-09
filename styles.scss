@@ -13,8 +13,9 @@
 
 }
 
-$width-lower: 500px;
-$width-upper: 501px;
+$width-lower: 849px;
+$width-upper: 850px;
+$width-medium: 950px;
 
 *,
 html,
@@ -30,13 +31,15 @@ body {
     background-color: var(--off-white);
     color: var(--dark-grayish-blue);
     padding: 0.9375rem;
-    max-width: 69.375rem;
     margin: auto;
+
 
     @media only screen and (min-width: $width-upper) {
         padding: 0;
         padding-top: 6%;
-        width: 100%;
+        width: 90%;
+        max-width: 69.375rem;
+
     }
 
 }
@@ -213,8 +216,15 @@ main {
         color: var(--very-dark-blue);
 
         @media only screen and (min-width: $width-upper) {
+            font-size: 3rem;
+            line-height: 3.6rem;
+            width: 85%;
+        }
+
+        @media only screen and (min-width: $width-medium) {
             font-size: 3.3rem;
             line-height: 3.6rem;
+            width: 85%;
         }
     }
 
@@ -241,18 +251,18 @@ main {
         letter-spacing: 0.25rem;
 
         @media only screen and (min-width: $width-upper) {
-            margin-block-start: 0;
+            margin-block-start: 1.9375rem;
         }
     }
 
-    &__container {
-        display: flex;
-        flex-direction: column;
+    // &__container {
+    //     display: flex;
+    //     flex-direction: column;
 
-        @media only screen and (min-width: $width-upper) {
-            justify-content: space-between;
-        }
-    }
+    //     @media only screen and (min-width: $width-upper) {
+    //         justify-content: space-between;
+    //     }
+    // }
 }
 
 .new {
@@ -266,8 +276,12 @@ main {
         letter-spacing: 0.1rem;
         margin-block-end: 1.75rem;
 
-        @media only screen and (min-width: $width-upper) {
+        @media only screen and (min-width: $width-medium) {
             font-size: 2.3rem;
+        }
+
+        @media only screen and (min-width: $width-upper) {
+            font-size: 2rem;
         }
     }
 

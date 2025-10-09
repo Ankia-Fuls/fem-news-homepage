@@ -24,14 +24,14 @@ body {
   background-color: var(--off-white);
   color: var(--dark-grayish-blue);
   padding: 0.9375rem;
-  max-width: 69.375rem;
   margin: auto;
 }
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 850px) {
   body {
     padding: 0;
     padding-top: 6%;
-    width: 100%;
+    width: 90%;
+    max-width: 69.375rem;
   }
 }
 
@@ -52,7 +52,7 @@ main {
   grid-template-rows: repeat(3, auto);
   gap: 3.9375rem;
 }
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 850px) {
   main {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
@@ -67,7 +67,7 @@ main {
   align-items: center;
   padding-block: 0.625rem;
 }
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 850px) {
   .navbar {
     padding-block: 0;
     padding-block-end: 2.1rem;
@@ -78,7 +78,7 @@ main {
   border: none;
   padding: 0;
 }
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 850px) {
   .navbar button {
     display: none;
   }
@@ -104,7 +104,7 @@ main {
 .navbar__close img {
   width: 2rem;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 849px) {
   .navbar__menu {
     position: fixed;
     padding: 1.5rem;
@@ -117,7 +117,7 @@ main {
     transition: translate 0.5s ease-in-out;
   }
 }
-@media only screen and (max-width: 500px) and (prefers-reduced-motion) {
+@media only screen and (max-width: 849px) and (prefers-reduced-motion) {
   .navbar__menu {
     translate: 0;
     opacity: 0;
@@ -132,7 +132,7 @@ main {
   align-items: left;
   gap: 1.7rem;
 }
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 850px) {
   .navbar__links {
     flex-direction: row;
     gap: 2.6rem;
@@ -146,7 +146,7 @@ main {
   color: inherit;
   font-size: 1.15rem;
 }
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 850px) {
   .navbar__link {
     font-size: 0.9375rem;
   }
@@ -154,7 +154,7 @@ main {
 .navbar__logo {
   width: 2.8125rem;
 }
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 850px) {
   .navbar__logo {
     width: 4.125rem;
   }
@@ -166,7 +166,7 @@ main {
   grid-template-rows: repeat(3, auto);
   gap: 0.8rem;
 }
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 850px) {
   .header {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
@@ -178,7 +178,7 @@ main {
   width: 100%;
   margin-bottom: 0.45rem;
 }
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 850px) {
   .header__img {
     grid-area: 1/1/2/3;
     margin-bottom: 0;
@@ -190,17 +190,25 @@ main {
   width: 80%;
   color: var(--very-dark-blue);
 }
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 850px) {
+  .header__title {
+    font-size: 3rem;
+    line-height: 3.6rem;
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 950px) {
   .header__title {
     font-size: 3.3rem;
     line-height: 3.6rem;
+    width: 85%;
   }
 }
 .header__text {
   font-size: 0.9375rem;
   line-height: 1.45;
 }
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 850px) {
   .header__text {
     font-size: 1rem;
   }
@@ -216,18 +224,9 @@ main {
   font-weight: 800;
   letter-spacing: 0.25rem;
 }
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 850px) {
   .header__button {
-    margin-block-start: 0;
-  }
-}
-.header__container {
-  display: flex;
-  flex-direction: column;
-}
-@media only screen and (min-width: 501px) {
-  .header__container {
-    justify-content: space-between;
+    margin-block-start: 1.9375rem;
   }
 }
 
@@ -242,9 +241,14 @@ main {
   letter-spacing: 0.1rem;
   margin-block-end: 1.75rem;
 }
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 950px) {
   .new__title {
     font-size: 2.3rem;
+  }
+}
+@media only screen and (min-width: 850px) {
+  .new__title {
+    font-size: 2rem;
   }
 }
 .new__divider {
@@ -269,7 +273,7 @@ main {
   flex-direction: column;
   gap: 2rem;
 }
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 850px) {
   .articles {
     grid-area: 2/1/3/3;
     flex-direction: row;
