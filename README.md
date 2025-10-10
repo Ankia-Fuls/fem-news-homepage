@@ -48,7 +48,7 @@ Users should be able to:
 
 ### What I learned
 
-I learned how to create a hamburger menu in an accessibile way. I used aria-expanded on the button used to control the menu in mobile form and set the menu as role="dialog" and labelled them both with the same invisible title to link them. I then used JS to set the open or close state for the expanded, and set up CSS for the menu based on if the menu was open or closed. The code to change the visibility is shown below. Note that a translate animation was used to make the menu slide in from the side, so the translation is set. For prefers reduced motion, the animation is changed to a fade in.
+I learned how to create a hamburger menu in an accessible way. I used aria-expanded on the button used to control the menu in mobile form and set the menu as role="dialog" and labelled them both with the same invisible title to link them. I then used JS to set the open or close state for the expanded, and set up CSS for the menu based on if the menu was open or closed. The code to change the visibility is shown below. Note that a translate animation was used to make the menu slide in from the side, so the translation is set. For prefers reduced motion, the animation is changed to a fade in.
 
 ```css
 .navbar__menu {
@@ -134,7 +134,7 @@ Focus is returned to the buttons on open and close for easier access, and the st
 
 ### Continued development
 
-I would like to learn more about creating accessibile websites and features such as these. I want to learn more about the proper use of inert.
+I would like to learn more about creating accessible websites and features such as these. I want to learn more about the proper use of inert.
 
 ### Useful resources
 
