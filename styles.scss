@@ -208,7 +208,8 @@ main {
             font-size: 0.9375rem;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             cursor: pointer;
             color: var(--soft-red)
         }
@@ -291,7 +292,8 @@ main {
             margin-block-start: 1.9375rem;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             cursor: pointer;
             background-color: var(--very-dark-blue);
             color: var(--off-white);
@@ -333,7 +335,8 @@ main {
         text-decoration: none;
         color: inherit;
 
-        &:hover {
+        &:hover,
+        &:focus {
             cursor: pointer;
             color: var(--soft-orange);
         }
@@ -378,8 +381,11 @@ main {
         color: var(--very-dark-blue);
         font-size: 1.125rem;
         font-weight: 800;
+        text-decoration: none;
 
-        &:hover {
+
+        &:hover,
+        &:focus {
             cursor: pointer;
             color: var(--soft-red);
         }

@@ -184,7 +184,7 @@ main {
     font-size: 0.9375rem;
   }
 }
-.navbar__link:hover {
+.navbar__link:hover, .navbar__link:focus {
   cursor: pointer;
   color: var(--soft-red);
 }
@@ -266,7 +266,7 @@ main {
     margin-block-start: 1.9375rem;
   }
 }
-.header__button:hover {
+.header__button:hover, .header__button:focus {
   cursor: pointer;
   background-color: var(--very-dark-blue);
   color: var(--off-white);
@@ -306,7 +306,7 @@ main {
   text-decoration: none;
   color: inherit;
 }
-.new__subheading:hover {
+.new__subheading:hover, .new__subheading:focus {
   cursor: pointer;
   color: var(--soft-orange);
 }
@@ -346,8 +346,9 @@ main {
   color: var(--very-dark-blue);
   font-size: 1.125rem;
   font-weight: 800;
+  text-decoration: none;
 }
-.articles__title:hover {
+.articles__title:hover, .articles__title:focus {
   cursor: pointer;
   color: var(--soft-red);
 }
